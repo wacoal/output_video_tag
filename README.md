@@ -23,3 +23,6 @@ writeVideo(picId,picSrc,picHref);
 </dd>
 </dl>
 
+<p>端末によって、videoタグの挙動がちがう。</p>
+<p>iPhoneとAndroid2.xが、強制ポップアップ再生。</p>
+<p>iPad/Android4.xが、その場で再生</p>
