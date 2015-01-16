@@ -23,22 +23,3 @@ writeVideo(picId,picSrc,picHref);
 </dd>
 </dl>
 
-
-
-
-
-
-■URL
-http://dev.mocom.tv/js/jquery.video.js
-
-■jQueryのバージョン
-/js/jquery-1.8.3.min.js より新しいもの
-(on を使っているので)
-
-■呼び出し
-writeVideo(picId,picSrc,picHref);
-
-■引数
-picId   = 表示させたい箇所のID (#は必須)
-picSrc  = サムネイル画像の値
-picHref = 動画ファイルの値
