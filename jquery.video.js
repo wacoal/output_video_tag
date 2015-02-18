@@ -109,6 +109,10 @@ function writeVideo(picId,picSrc,picHref){
 		} else {
 			picWidth = picImg.naturalWidth;
 			picHeight = picImg.naturalHeight;
+			if( picWidth < 180 ){
+				picWidth = pwSize;
+				picHeight = phSize;
+			}
 		}
 		var cssBody  ='position:relative;max-width:100%;width:'+picWidth+'px;height:'+picHeight+'px;overflow:hidden';
 		var cssCover ='position:absolute;top:0;left:0;display:block;max-width:100%;width:'+picWidth+'px;height:'+picHeight+'px;padding:0;margin:0;background:none;border:none;';
@@ -121,7 +125,7 @@ function writeVideo(picId,picSrc,picHref){
 			arrVideo += '<video id="js-video" class="video-box__main" src="'+picHref+'" preload="none" width="'+picWidth+'" height="'+picHeight+'" poster="'+picSrc+'" controls>';
 			arrVideo += '<a href="'+ picHref +'" class="video-box__hedge hedge"><img src="'+picSrc+'" class="hedge__pic" alt="videoタグがないときのリンク再生用サムネイル" /></a>';
 			arrVideo += '</video>';
-			if (ua.isiPhone) { //左記の端末は強制ポップアップ動画再生のため
+			if (ua.isiPhone || ua.ver == 2 ) { //左記の端末は強制ポップアップ動画再生のため
 				arrVideo += '<img src="'+ picSrc +'" id="js-video-cover" class="video-box__cover" style="'+cssCover+'" />';
 				arrVideo += '<a href="javascript:;" id="'+playBtn+'" class="video-box__btn" style="'+cssCover+'"></a>';
 			}
