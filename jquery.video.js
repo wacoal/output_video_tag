@@ -74,14 +74,14 @@ function writeVideo(picId,picSrc,picHref){
 'JI5VVznKuqqqrxVVUDqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+
 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//Z';
 	
-	var picImg = new Image();
-	var picWidth = "";
-	var picHeight = "";
-	var pwSize = 180;
-	var phSize = 120;
-	var noImg = "";
-	var noVideo = "";
-	var playBtn = 'js-video-play-btn';
+	var picImg = new Image(),
+		picWidth = "",
+		picHeight = "",
+		pwSize = 180,
+		phSize = 120,
+		noImg = "",
+		noVideo = "",
+		playBtn = 'js-video-play-btn';
 	
 	//サムネイル
 	if( picSrc == 0 || picSrc == null || picSrc == undefined ){
